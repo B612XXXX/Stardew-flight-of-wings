@@ -1,0 +1,71 @@
+# Local tools, project notes and generated output.
+/.tools/
+/AGENTS.md
+/docs/
+/build/
+/release/
+*.zip
+
+# Keep only the current art sources and their required input template.
+/assets/*
+!/assets/animation-bound/
+/assets/animation-bound/*
+!/assets/animation-bound/v5/
+!/assets/butterfly-wings/
+/assets/butterfly-wings/*
+!/assets/butterfly-wings/v1/
+!/assets/concepts/
+/assets/concepts/*
+!/assets/concepts/angel-wings-slender-v4.png
+/assets/**/*.md
+/assets/**/qa-summary.json
+/assets/**/perspective-qa.json
+/assets/**/design-parameters.json
+/assets/**/motion-trajectories.csv
+
+# Keep build and validation tools; other local utilities stay private.
+/tools/*
+!/tools/art/
+!/tools/inspect/
+!/tools/check_package.py
+!/tools/package-nexus.py
+!/tools/validate-swim-compat.ps1
+/tools/art/*
+!/tools/art/build_approved_wing_animation.py
+!/tools/art/build_butterfly_wing_animation.py
+!/tools/art/check_approved_animation.py
+!/tools/art/check_butterfly_animation.py
+!/tools/art/check_wing_furniture.py
+!/tools/art/pack_preview_atlases.py
+!/tools/art/pixel_art.py
+!/tools/art/wing_furniture_art.py
+
+# Compiled output and caches.
+**/bin/
+**/obj/
+**/__pycache__/
+*.py[cod]
+*.dll
+*.exe
+*.pdb
+
+# Local settings, credentials, saves and logs.
+.env
+.env.*
+!.env.example
+config.json
+Saves/
+ErrorLogs/
+*.log
+*.tmp
+*.bak
+
+# Editor and OS files.
+.vs/
+.idea/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
+Desktop.ini
+/ChatGPT Image*.png

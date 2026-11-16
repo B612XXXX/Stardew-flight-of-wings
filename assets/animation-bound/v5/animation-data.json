@@ -1,0 +1,64 @@
+{
+  "source": "assets\\concepts\\angel-wings-slender-v4.png",
+  "source_sha256": "5b90861781a7563455fc224d7b4f007126ee562c072b62378b809ab604cae393",
+  "canvas": [
+    80,
+    80
+  ],
+  "method": "unchanged v4 silhouette, three-colour native palette, skeleton-v1 motion and fixed white block mounts",
+  "palette": [
+    [
+      255,
+      255,
+      255
+    ],
+    [
+      207,
+      217,
+      219
+    ],
+    [
+      113,
+      133,
+      139
+    ]
+  ],
+  "canonical_size": [
+    32,
+    18
+  ],
+  "canonical_root": [
+    31.5,
+    12.358056265984654
+  ],
+  "single_wing_horizontal_reach": 31.5,
+  "farmer_sprite_height": 32,
+  "hover_flap_degrees": [
+    -44,
+    56
+  ],
+  "downstroke_fraction": 0.44,
+  "in_game_verified": false,
+  "states": {
+    "H": {
+      "frames_per_direction": 16,
+      "period_ms": 960
+    },
+    "M": {
+      "frames_per_direction": 16,
+      "period_ms": 840
+    },
+    "Q": {
+      "frames_per_direction": 16,
+      "period_ms": 1200
+    },
+    "T": {
+      "frames_per_direction": 10,
+      "period_ms": 700
+    },
+    "L": {
+      "frames_per_direction": 10,
+      "period_ms": 700
+    }
+  }
+}

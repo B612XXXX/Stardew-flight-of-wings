@@ -1,0 +1,212 @@
+{
+  "kind": "current rebuildable butterfly-wing design",
+  "design_revision": "occlusion-r9",
+  "runtime_integration": "source for assets/butterfly; packaging and installation verified separately",
+  "canvas": [
+    80,
+    80
+  ],
+  "broad_silhouette_target_height": 32,
+  "silhouette_scale": {
+    "horizontal": 0.62,
+    "vertical_broad": 0.45,
+    "airborne_scale_is_constant": true
+  },
+  "states": {
+    "H": {
+      "frame_count": 16,
+      "atlas_size": [
+        1280,
+        80
+      ]
+    },
+    "M": {
+      "frame_count": 16,
+      "atlas_size": [
+        1280,
+        80
+      ]
+    },
+    "Q": {
+      "frame_count": 16,
+      "atlas_size": [
+        1280,
+        80
+      ]
+    },
+    "T": {
+      "frame_count": 10,
+      "atlas_size": [
+        800,
+        80
+      ]
+    },
+    "L": {
+      "frame_count": 10,
+      "atlas_size": [
+        800,
+        80
+      ]
+    }
+  },
+  "views": [
+    "back",
+    "right",
+    "front",
+    "left"
+  ],
+  "layers": [
+    "behind",
+    "in_front"
+  ],
+  "palette": {
+    "outline": "#442440",
+    "outline_light": "#70405b",
+    "orange_shadow": "#ca5a18",
+    "orange": "#f58a1c",
+    "orange_light": "#ffad2e",
+    "gold": "#ffd66b",
+    "gold_light": "#fff0a6",
+    "blue": "#62a7cb",
+    "blue_shadow": "#3f7da8",
+    "lavender": "#bbb5e4",
+    "lavender_light": "#e4e1ff",
+    "lavender_shadow": "#8b83bd"
+  },
+  "motion": {
+    "description": "fixed adjacent hinges; orthographic signed 3D stroke and chord pitch; light hindwing flex; whole far wing / farmer / whole opaque near wing; restrained one-fifth forward occlusion",
+    "projection": "orthographic",
+    "stroke_angle_degrees": [
+      -16.5,
+      72
+    ],
+    "hindwing_flex_max_degrees": 1.5,
+    "camera_elevation_degrees": 8,
+    "side_camera_front_bias_degrees": 12,
+    "height_compensation_per_frame": false,
+    "far_wing_scale_factor": 1.0,
+    "H_period_ms": 960,
+    "M_period_ms": 840,
+    "Q_period_ms": 1200,
+    "transition_period_ms": 700,
+    "continuity": {
+      "T10_equals": "H09",
+      "L01_equals": "H03"
+    }
+  },
+  "source_reference": "reference/butterfly-shape-reference-2026-10-06.png",
+  "anatomy_qa": {
+    "back": {
+      "broad_near_fore_hind_overlap_pixels": 58,
+      "overlap_beyond_body_pixels": 47,
+      "wing_opaque_pixels": {
+        "near": 522,
+        "far": 522
+      },
+      "wing_bounds": {
+        "near": [
+          41,
+          26,
+          66,
+          59
+        ],
+        "far": [
+          15,
+          26,
+          40,
+          59
+        ]
+      }
+    },
+    "right": {
+      "broad_near_fore_hind_overlap_pixels": 17,
+      "overlap_beyond_body_pixels": null,
+      "wing_opaque_pixels": {
+        "near": 135,
+        "far": 139
+      },
+      "wing_bounds": {
+        "near": [
+          33,
+          29,
+          39,
+          60
+        ],
+        "far": [
+          38,
+          23,
+          44,
+          58
+        ]
+      }
+    },
+    "front": {
+      "broad_near_fore_hind_overlap_pixels": 58,
+      "overlap_beyond_body_pixels": 47,
+      "wing_opaque_pixels": {
+        "near": 522,
+        "far": 522
+      },
+      "wing_bounds": {
+        "near": [
+          41,
+          26,
+          66,
+          59
+        ],
+        "far": [
+          15,
+          26,
+          40,
+          59
+        ]
+      }
+    },
+    "left": {
+      "broad_near_fore_hind_overlap_pixels": 17,
+      "overlap_beyond_body_pixels": null,
+      "wing_opaque_pixels": {
+        "near": 135,
+        "far": 139
+      },
+      "wing_bounds": {
+        "near": [
+          42,
+          29,
+          48,
+          60
+        ],
+        "far": [
+          37,
+          23,
+          43,
+          58
+        ]
+      }
+    }
+  },
+  "qa": {
+    "frame_files": 544,
+    "atlas_files": 40,
+    "alpha": [
+      0,
+      255
+    ],
+    "all_airborne_layers_nonempty": true,
+    "empty_docked_layers": [
+      {
+        "state": "T",
+        "view": "back",
+        "layer": "behind",
+        "frame": 1
+      },
+      {
+        "state": "L",
+        "view": "back",
+        "layer": "behind",
+        "frame": 10
+      }
+    ],
+    "source_reference_sha256": "f10ff5054c6c149a3a6726a23d7d7bf7329a2dde1d2f13a888a00eac507b0d93"
+  }
+}

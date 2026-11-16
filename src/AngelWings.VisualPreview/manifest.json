@@ -1,0 +1,10 @@
+{
+  "Name": "Angel Wings - Flight Alpha",
+  "Author": "Angel Wings Project",
+  "Version": "0.4.13-quick-test",
+  "Description": "Quick playtest build: optional Swim 1.9.0 surface flight switching; underwater takeoff blocked; native-scale wing displays; occlusion-r9 art; 3-heart, zero-flower quest.",
+  "UniqueID": "AngelWingsProject.VisualPreview",
+  "EntryDll": "AngelWings.VisualPreview.dll",
+  "MinimumApiVersion": "4.5.1",
+  "UpdateKeys": []
+}

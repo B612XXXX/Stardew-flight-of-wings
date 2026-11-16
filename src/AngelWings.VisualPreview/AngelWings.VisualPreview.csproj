@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>12</LangVersion>
+    <AssemblyName>AngelWings.VisualPreview</AssemblyName>
+    <AngelWingsProfile Condition="'$(AngelWingsProfile)' == ''">QuickTest</AngelWingsProfile>
+    <Version>0.4.13-quick-test</Version>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <GamePath Condition="'$(GamePath)' == ''">$(STARDEW_GAME_PATH)</GamePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(AngelWingsProfile)' == 'Formal'">
+    <Version>0.4.13</Version>
+    <DefineConstants>$(DefineConstants);ANGELWINGS_FORMAL</DefineConstants>
+    <OutputPath>bin/$(Configuration)/formal/</OutputPath>
+    <IntermediateOutputPath>obj/$(Configuration)/formal/$(TargetFramework)/</IntermediateOutputPath>
+  </PropertyGroup>
+  <Target Name="CheckGamePath" BeforeTargets="ResolveReferences">
+    <Error Condition="'$(AngelWingsProfile)' != 'QuickTest' and '$(AngelWingsProfile)' != 'Formal'" Text="AngelWingsProfile must be QuickTest or Formal." />
+    <Error Condition="!Exists('$(GamePath)/StardewModdingAPI.dll')" Text="Pass -p:GamePath=your Stardew Valley folder, containing SMAPI." />
+  </Target>
+  <ItemGroup>
+    <Reference Include="Stardew Valley"><HintPath>$(GamePath)/Stardew Valley.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="StardewValley.GameData"><HintPath>$(GamePath)/StardewValley.GameData.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="StardewModdingAPI"><HintPath>$(GamePath)/StardewModdingAPI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="SMAPI.Toolkit.CoreInterfaces"><HintPath>$(GamePath)/smapi-internal/SMAPI.Toolkit.CoreInterfaces.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="MonoGame.Framework"><HintPath>$(GamePath)/MonoGame.Framework.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="xTile"><HintPath>$(GamePath)/xTile.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(GamePath)/smapi-internal/0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <None Update="manifest.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="i18n/*.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="assets/**/*.png" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
